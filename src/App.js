@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import TimersDashboard from './TimersDashboard'
+// https://github.com/MountainlandWEB/reactjs/tree/master/lessons/module-02-components-part-1
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+/* 
+EditableTimer is a component that switches between a Timer (toggleble) and TimerForm (editable).
+EditableTimerList is the box-like component that holds all of these EditableTimers.
+ToggleableTimerForm switches between a plus button and a TimerForm to be added to EditableTimerList.
+TimersDashboard holds EditableTimerList and ToggleableTimerForm, which in them holds everything.
+*/
+class App extends Component {
+  render() {
+    return (
+      <>
+        <TimersDashboard />
+      </>
+    );
+  }
 }
 
 export default App;
