@@ -15,21 +15,7 @@ And on and on down the chain.
 
 export default class TimersDashboard extends Component {
     state = {
-      timers: [
-        {
-          title: 'Practice squat',
-          project: 'Gym Chores',
-          id: uuidv4(), // There is not supposed to be a dot between uuid and v4()
-          elapsed: 5456099,
-          runningSince: Date.now(),
-        }, {
-          title: 'Bake squash',
-          project: 'Kitchen Chores',
-          id: uuidv4(), // There is not supposed to be a dot between uuid and v4()
-          elapsed: 1273998,
-          runningSince: null,
-        },
-      ],
+      timers: [],
     };
 
     handleCreateFormSubmit = (timer) => { // This inserts new timer into our state, and get auto-rendered
