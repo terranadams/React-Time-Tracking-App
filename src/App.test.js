@@ -1,8 +1,22 @@
-import { render, screen } from '@testing-library/react';
+import React from 'react';
+import { shallow } from 'enzyme';
 import App from './App';
+import TimersDashboard from './TimersDashboard';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+describe('App', () => {
+  let wrapper
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <App/>
+    )
+  })
+
+  it('Should return TRUE if <TimerDashboard /> is being rendered.', () => {
+    expect(
+      wrapper.containsMatchingElement(<TimersDashboard/>)
+    ).toBe(true)
+  })
+
 });
